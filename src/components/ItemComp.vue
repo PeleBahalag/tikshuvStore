@@ -3,13 +3,25 @@
         <img class="picture" :src="obj.imgSrc"/>
         <h3>{{obj.name}}</h3>
         <p>מחיר: {{  obj.price }}</p>
-        <button>הוסף לעגלה</button>
+        <button @click="addItem()">הוסף לעגלה</button>
     </div>
 </template>
 
 <script>
 export default{
-    props:['obj']
+    props:{obj: Object,
+        index: Number
+    },
+    methods : {
+        addItem(){
+            if(this.obj.inStock){
+                this.$emit('item-added' , this.index)
+            }
+            else{
+                alert("סליחה," + this.obj.name + " יש רק אחד והוא כבר בעגלה שלך! ")
+            }
+        }
+    }
 }
 </script>
 
