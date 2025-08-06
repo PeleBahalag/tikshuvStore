@@ -2,7 +2,7 @@
     <div class="tikshuv-boy">
         <img class="picture" :src="obj.imgSrc"/>
         <h3>{{obj.name}}</h3>
-        <p>מחיר: {{  obj.price }}</p>
+        <p>₪מחיר: {{  obj.price }} </p>
         <button @click="addItem()">הוסף לעגלה</button>
     </div>
 </template>

@@ -16,19 +16,22 @@ import CartItem from './components/CartItem.vue';
     data(){
       return{
         items:[
-          {name : "ירין בן מכחול" , imgSrc : yarinBm , price : 0 , inStock : true},
-          {name : "ירין שיט" , imgSrc : yarinS , price : 0 , inStock : true} ,
-          {name : "עמית רומם" , imgSrc : amit , price : 0 , inStock : true} ,
-          {name : "יניב הייזמן" , imgSrc : yaniv, price : 0 , inStock : true} ,
-          {name : "איתי לוי (לא הזמר)" , imgSrc : itay , price : 0 , inStock : true} ,
-          {name : "עומר תודה לאל" , imgSrc : omer , price : 0 , inStock : true} ,
-          {name : "Jewish boy" , imgSrc : roee , price : 0 , inStock : true} ,
-          {name : "צ שחף סמל מחשוב" , imgSrc : shahaf , price : 0 , inStock : true} ,
-          {name : "דניאל מדריכה" , imgSrc : daniel , price : 0 , inStock : true} ,
-          { name : "טל שיר" , imgSrc : tal , price : 0 , inStock : true}
+          {name : "ירין בן מכחול" , imgSrc : yarinBm , price : "12 שעות שינה" , inStock : true},
+          {name : "ירין שיט" , imgSrc : yarinS , price : "100 קידודים" , inStock : true} ,
+          {name : "עמית מה שלמה" , imgSrc : amit , price : "100 מילים בדקה" , inStock : true} ,
+          {name : "יניב הייזמן" , imgSrc : yaniv, price : 420 , inStock : true} ,
+          {name : "איתי לוי (לא הזמר)" , imgSrc : itay , price : "250 ש''ח לכרטיס'" , inStock : true} ,
+          {name : "עומר תודה לאל" , imgSrc : omer , price : 1000000 , inStock : true} ,
+          {name : "Jewish boy" , imgSrc : roee , price : "31 גימלים" , inStock : true} ,
+          {name : "צ שחף סמל מחשוב" , imgSrc : shahaf , price : 749999 , inStock : true} ,
+          {name : "גל בן אבו" , price : 750000 , inStock : true  } ,
+          {name : "דניאל מדריכה" , imgSrc : daniel , price : 666 , inStock : true} ,
+          {name : "טל שיר" , imgSrc : tal , price : 2000 , inStock : true},
+          
         ],
         userItems : [] , 
-        totalPrice : 0,
+        totalPriceNum : 0,
+        totalPriceString : "",
         cartOpen : false,
         showPay : false
       }
@@ -134,6 +137,7 @@ h1{
   display: flex;
   flex-flow: row wrap;
   overflow: auto;
+  margin-bottom: 100px;
 }
 
 .cart-menu{
